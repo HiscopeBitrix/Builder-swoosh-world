@@ -6,6 +6,7 @@ import ServicesSection from "@/components/ServicesSection";
 import PortfolioSection from "@/components/PortfolioSection";
 import ContactsSection from "@/components/ContactsSection";
 import Footer from "@/components/Footer";
+import ScrollToTop from "@/components/ScrollToTop";
 
 export default function Index() {
   return (
@@ -33,6 +34,9 @@ export default function Index() {
 
       {/* 7. Футер */}
       <Footer />
+
+      {/* Scroll to top button */}
+      <ScrollToTop />
     </div>
   );
 }
