@@ -7,6 +7,9 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Services from "./pages/Services";
+import BitrixServices from "./pages/BitrixServices";
+import Bitrix24Services from "./pages/Bitrix24Services";
+import About from "./pages/About";
 import Portfolio from "./pages/Portfolio";
 import Contacts from "./pages/Contacts";
 import CorporateSites from "./pages/services/CorporateSites";
@@ -29,6 +32,9 @@ const App = () => (
       <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/services" element={<Services />} />
+        <Route path="/services/bitrix" element={<BitrixServices />} />
+        <Route path="/services/bitrix24" element={<Bitrix24Services />} />
+        <Route path="/about" element={<About />} />
         <Route path="/services/corporate-sites" element={<CorporateSites />} />
         <Route path="/services/ecommerce" element={<Ecommerce />} />
         <Route path="/services/support" element={<Support />} />
