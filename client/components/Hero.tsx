@@ -14,7 +14,7 @@ const Hero = () => {
       description: "Создаем современные веб-решения на платформе 1С-Битрикс",
       features: [
         "Корпоративные сайты с CMS",
-        "Интернет-магазины с каталого��",
+        "Интернет-магазины с каталогом",
         "Лендинги для бизнеса",
         "SEO-оптимизация сайтов",
       ],
@@ -51,7 +51,7 @@ const Hero = () => {
 
   const benefits = [
     "Опыт работы более 8 лет",
-    "100+ успешных проектов",
+    "100+ у��пешных проектов",
     "Поддержка 24/7",
     "Гарантия качества",
   ];
@@ -70,15 +70,21 @@ const Hero = () => {
     <>
       <section className="relative overflow-hidden bg-gradient-to-br from-background via-background to-primary/10 py-[50px] lg:py-[50px]">
         {/* Decorative Elements */}
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 via-transparent to-cyan-500/5"></div>
+        <div
+          className="absolute inset-0 bg-gradient-to-r from-purple-500/5 via-transparent to-cyan-500/5"
+          style={{ top: "2px" }}
+        ></div>
         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-500 via-red-500 to-cyan-500"></div>
 
         <div className="container relative mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div
+            className="grid lg:grid-cols-2 gap-12 items-center"
+            style={{ margin: "71px 0 98px" }}
+          >
             {/* Content */}
             <div className="space-y-8">
               <div className="space-y-4">
-                <div className="space-y-2 min-h-[280px] transition-all duration-700">
+                <div className="space-y-2 transition-all duration-700">
                   <h1 className="text-4xl lg:text-6xl font-bold tracking-tight text-foreground transition-all duration-700">
                     <span
                       className={`bg-gradient-to-r ${currentContent.gradient} bg-clip-text text-transparent transition-all duration-700`}
@@ -92,28 +98,6 @@ const Hero = () => {
                   <p className="text-xl text-muted-foreground max-w-2xl transition-all duration-700">
                     {currentContent.description}
                   </p>
-
-                  {/* Dynamic Features */}
-                  <div className="pt-6 space-y-3">
-                    {currentContent.features.map((feature, index) => (
-                      <div
-                        key={index}
-                        className="flex items-center space-x-3 transition-all duration-700 opacity-0 animate-in slide-in-from-left"
-                        style={{
-                          animationDelay: `${index * 200}ms`,
-                          animationFillMode: "forwards",
-                        }}
-                      >
-                        <div
-                          className="w-3 h-3 rounded-full transition-all duration-700"
-                          style={{ backgroundColor: currentContent.color }}
-                        ></div>
-                        <span className="text-sm text-muted-foreground font-medium">
-                          {feature}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
                 </div>
               </div>
 
@@ -170,9 +154,6 @@ const Hero = () => {
                     >
                       {currentContent.title}
                     </div>
-                    <div className="text-sm text-muted-foreground">
-                      {currentContent.subtitle}
-                    </div>
 
                     <div className="space-y-2">
                       {currentContent.features
@@ -180,13 +161,13 @@ const Hero = () => {
                         .map((feature, index) => (
                           <div
                             key={index}
-                            className="flex items-center space-x-2 text-xs text-muted-foreground"
+                            className="flex items-center text-xs text-muted-foreground"
                           >
                             <div
                               className="w-1.5 h-1.5 rounded-full"
                               style={{ backgroundColor: currentContent.color }}
                             ></div>
-                            {feature}
+                            <span>&nbsp;{feature}</span>
                           </div>
                         ))}
                     </div>
@@ -197,7 +178,7 @@ const Hero = () => {
                       className="h-full transition-all duration-700 rounded-full"
                       style={{
                         backgroundColor: currentContent.color,
-                        width: "75%",
+                        width: "100%",
                       }}
                     ></div>
                   </div>
