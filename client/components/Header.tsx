@@ -1,15 +1,16 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
 
   const navigation = [
-    { name: "Главная", href: "/" },
-    { name: "Услуги", href: "/services" },
+    { name: "1С Bitrix", href: "/services#bitrix" },
+    { name: "Bitrix 24", href: "/services#bitrix24" },
+    { name: "О компании", href: "#about" },
     { name: "Портфолио", href: "/portfolio" },
     { name: "Контакты", href: "/contacts" },
   ];
