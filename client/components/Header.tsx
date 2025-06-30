@@ -26,12 +26,7 @@ const Header = () => {
           {/* Desktop Layout */}
           <div className="hidden md:flex h-16 items-center justify-between">
             {/* Logo */}
-            <Link to="/" className="flex items-center space-x-2">
-              <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-sm">
-                  1C
-                </span>
-              </div>
+            <Link to="/" className="flex items-center">
               <span className="font-bold text-xl text-foreground">
                 IT-Мечта
               </span>
@@ -96,12 +91,7 @@ const Header = () => {
             </Button>
 
             {/* Logo - Center */}
-            <Link to="/" className="flex items-center space-x-2">
-              <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-sm">
-                  1C
-                </span>
-              </div>
+            <Link to="/" className="flex items-center">
               <span className="font-bold text-xl text-foreground">
                 IT-Мечта
               </span>
