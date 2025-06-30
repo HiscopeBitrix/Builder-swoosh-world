@@ -38,11 +38,27 @@ const Header = () => {
               <Link
                 key={item.name}
                 to={item.href}
-                className={`text-sm font-medium transition-colors hover:text-primary ${
+                className={`text-sm font-medium transition-colors hover:text-primary flex items-center space-x-2 ${
                   isActive(item.href) ? "text-primary" : "text-muted-foreground"
                 }`}
               >
-                {item.name}
+                {item.name === "1С Bitrix" ? (
+                  <>
+                    <div className="w-6 h-6 bg-gradient-to-r from-blue-500 to-red-600 rounded flex items-center justify-center">
+                      <span className="text-white font-bold text-xs">1C</span>
+                    </div>
+                    <span>1С Bitrix</span>
+                  </>
+                ) : item.name === "Bitrix 24" ? (
+                  <>
+                    <div className="w-6 h-6 bg-gradient-to-r from-cyan-500 to-blue-600 rounded flex items-center justify-center">
+                      <span className="text-white font-bold text-xs">24</span>
+                    </div>
+                    <span>Bitrix 24</span>
+                  </>
+                ) : (
+                  <span>{item.name}</span>
+                )}
               </Link>
             ))}
           </nav>
