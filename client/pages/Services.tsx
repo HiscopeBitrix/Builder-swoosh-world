@@ -153,6 +153,13 @@ export default function Services() {
       </main>
       <Footer />
       <ScrollToTop />
+
+      <FormModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        title="Получить консультацию"
+        buttonText="Отправить заявку"
+      />
     </div>
   );
 }
