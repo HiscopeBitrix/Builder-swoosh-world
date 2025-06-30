@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ExternalLink, ChevronLeft, ChevronRight } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 
 export default function Portfolio() {
   useEffect(() => {
@@ -12,7 +12,6 @@ export default function Portfolio() {
   }, []);
 
   const [activeCategory, setActiveCategory] = useState(0);
-  const [currentProject, setCurrentProject] = useState(0);
 
   const portfolioCategories = [
     {
@@ -23,27 +22,17 @@ export default function Portfolio() {
           name: "Корпоративный сайт производственной компании",
           type: "Корпоративный сайт",
           description:
-            "Современный многостраничный сайт с каталогом продукции, интеграцией с CRM системой и адаптивным дизайном.",
+            "Современный многостраничный сайт с каталогом продукции и интеграцией с CRM системой.",
           tech: ["1С-Битрикс", "Адаптивный дизайн", "CRM интеграция"],
           url: "https://example-corp.ru",
-          stats: {
-            duration: "45 дней",
-            increase: "+150% трафика",
-            conversion: "+80% заявок",
-          },
         },
         {
           name: "Интернет-магазин спортивных товаров",
           type: "E-commerce",
           description:
-            "Полнофункциональный интернет-магазин с системой управления заказами, интеграцией с 1С и платежными системами.",
+            "Полнофункциональный интернет-магазин с системой управления заказами и платежным�� системами.",
           tech: ["1С-Битрикс", "E-commerce", "Платежные системы"],
           url: "https://sportzone-shop.ru",
-          stats: {
-            duration: "60 дней",
-            increase: "+300% продаж",
-            conversion: "+120% конверсия",
-          },
         },
         {
           name: "Лендинг IT-услуг с высокой конверсией",
@@ -52,11 +41,30 @@ export default function Portfolio() {
             "Одностраничный сайт для IT-компании с фокусом на конверсию и SEO-оптимизацией.",
           tech: ["1С-Битрикс", "SEO-оптимизация", "A/B тесты"],
           url: "https://it-landing.ru",
-          stats: {
-            duration: "20 дней",
-            increase: "+200% лидов",
-            conversion: "+250% конверсия",
-          },
+        },
+        {
+          name: "Каталог недвижимости",
+          type: "Каталог",
+          description:
+            "Удобная система поиска и просмотра объектов недвижимости с картами и фильтрами.",
+          tech: ["1С-Битрикс", "Карты", "Поиск"],
+          url: "https://realty-catalog.ru",
+        },
+        {
+          name: "Образовательный портал",
+          type: "Портал",
+          description:
+            "Платформа для онлайн-обучения с системой тестирования и прогресса ст��дентов.",
+          tech: ["1С-Битрикс", "LMS", "Тестирование"],
+          url: "https://edu-portal.ru",
+        },
+        {
+          name: "Сайт медицинской клиники",
+          type: "Медицина",
+          description:
+            "Информационный сайт с записью на прием и личным кабинетом пациентов.",
+          tech: ["1С-Битрикс", "Запись онлайн", "ЛК"],
+          url: "https://med-clinic.ru",
         },
       ],
     },
@@ -68,40 +76,33 @@ export default function Portfolio() {
           name: "Оптимизация производительности интернет-магазина",
           type: "Техподдержка",
           description:
-            "Комплексная оптимизация скорости загрузки, настройка кэширования и улучшение пользовательского опыта.",
+            "Комплексная оптимизация скорости загрузки и улучшение пользовательского опыта.",
           tech: ["Оптимизация", "Кэширование", "Performance"],
           url: "https://fast-shop.ru",
-          stats: {
-            duration: "30 дней",
-            increase: "-70% время загрузки",
-            conversion: "+90% удержание",
-          },
         },
         {
           name: "Добавление модуля онлайн-чата",
           type: "Доработка",
           description:
-            "Интеграция системы онлайн-консультаций с возможностью передачи файлов и истории переписки.",
+            "Интеграция системы онлайн-консультаций с возможностью передачи файлов.",
           tech: ["Новый функционал", "Интеграция", "Real-time"],
           url: "https://chat-integration.ru",
-          stats: {
-            duration: "15 дней",
-            increase: "+40% обращений",
-            conversion: "+60% продаж",
-          },
         },
         {
           name: "Миграция на новую версию Битрикс",
           type: "Обновление",
           description:
-            "Безопасная миграция с сохранением всех данных и функциональности, обновление компонентов.",
+            "Безопасная миграция с сохранением всех данных и функциональности.",
           tech: ["Миграция", "Тестирование", "Безопасность"],
           url: "https://updated-site.ru",
-          stats: {
-            duration: "25 дней",
-            increase: "+50% безопасность",
-            conversion: "100% сохранность данных",
-          },
+        },
+        {
+          name: "Настройка резервного копирования",
+          type: "Безопасность",
+          description:
+            "Автоматическое создание резервных копий и система восстановления данных.",
+          tech: ["Backup", "Автоматизация", "Мониторинг"],
+          url: "https://backup-system.ru",
         },
       ],
     },
@@ -113,63 +114,50 @@ export default function Portfolio() {
           name: "CRM для туристического агентства",
           type: "CRM",
           description:
-            "Полная автоматизация процессов продаж туров с интеграцией внешних API и системой аналитики.",
+            "Полная автоматизация процессов продаж туров с интеграцией внешних API.",
           tech: ["Bitrix 24", "Автоматизация", "API интеграция"],
           url: "https://travel-crm.ru",
-          stats: {
-            duration: "40 дней",
-            increase: "+180% эффективность",
-            conversion: "+130% продаж",
-          },
         },
         {
           name: "Система управления проектами",
           type: "Проект-менеджмент",
           description:
-            "Настройка рабочих процессов, управление задачами и контроль времени для IT-команды.",
+            "Настройка рабочих процессов и управление задачами для IT-команды.",
           tech: ["Bitrix 24", "Проект-менеджмент", "Автоматизация"],
           url: "https://project-management.ru",
-          stats: {
-            duration: "35 дней",
-            increase: "+200% контроль",
-            conversion: "+150% производительность",
-          },
         },
         {
           name: "Автоматизация продаж для IT-компании",
           type: "Продажи",
           description:
-            "Создание воронок продаж, настройка автоматических уведомлений и системы отчетности.",
+            "Создание воронок продаж и настройка автоматических уведомлений.",
           tech: ["Bitrix 24", "Воронки продаж", "Аналитика"],
           url: "https://sales-automation.ru",
-          stats: {
-            duration: "50 дней",
-            increase: "+300% автоматизация",
-            conversion: "+220% закрытие сделок",
-          },
+        },
+        {
+          name: "HR-процессы и подбор персонала",
+          type: "HR",
+          description:
+            "Автоматизация процессов найма и управления персоналом компании.",
+          tech: ["Bitrix 24", "HR", "Рекрутинг"],
+          url: "https://hr-automation.ru",
+        },
+        {
+          name: "Склад и логистика",
+          type: "Логистика",
+          description:
+            "Управление складскими запасами и логистическими процессами.",
+          tech: ["Bitrix 24", "Склад", "Логистика"],
+          url: "https://warehouse-system.ru",
         },
       ],
     },
   ];
 
   const currentCategory = portfolioCategories[activeCategory];
-  const project = currentCategory.projects[currentProject];
-
-  const nextProject = () => {
-    setCurrentProject((prev) =>
-      prev === currentCategory.projects.length - 1 ? 0 : prev + 1,
-    );
-  };
-
-  const prevProject = () => {
-    setCurrentProject((prev) =>
-      prev === 0 ? currentCategory.projects.length - 1 : prev - 1,
-    );
-  };
 
   const handleCategoryChange = (index: number) => {
     setActiveCategory(index);
-    setCurrentProject(0);
   };
 
   return (
@@ -209,7 +197,7 @@ export default function Portfolio() {
           </div>
         </section>
 
-        {/* Project Showcase */}
+        {/* Projects Grid */}
         <section className="py-20">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
@@ -221,172 +209,52 @@ export default function Portfolio() {
               </p>
             </div>
 
-            {/* Project Display */}
-            <div className="max-w-4xl mx-auto">
-              <Card className="overflow-hidden">
-                <div className="grid lg:grid-cols-2 gap-0">
-                  {/* Project Visual */}
-                  <div className="bg-gradient-to-br from-primary/10 to-primary/5 p-12 flex items-center justify-center min-h-[400px]">
-                    <div className="text-center space-y-6">
-                      <div className="w-24 h-24 mx-auto bg-gradient-to-br from-primary to-accent rounded-2xl flex items-center justify-center text-white text-3xl font-bold shadow-lg">
-                        {project.name.charAt(0)}
-                      </div>
-                      <div>
-                        <h3 className="text-2xl font-bold text-foreground">
-                          {project.name}
-                        </h3>
-                        <Badge variant="secondary" className="mt-2">
-                          {project.type}
-                        </Badge>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {currentCategory.projects.map((project, index) => (
+                <Card
+                  key={index}
+                  className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+                >
+                  <CardHeader>
+                    <div className="w-full h-48 bg-gradient-to-br from-primary/10 to-primary/5 rounded-lg mb-4 flex items-center justify-center">
+                      <div className="text-center space-y-3">
+                        <div className="w-16 h-16 mx-auto bg-gradient-to-br from-primary to-accent rounded-2xl flex items-center justify-center text-white text-2xl font-bold shadow-lg">
+                          {project.name.charAt(0)}
+                        </div>
+                        <Badge variant="secondary">{project.type}</Badge>
                       </div>
                     </div>
-                  </div>
+                    <CardTitle className="text-lg group-hover:text-primary transition-colors">
+                      {project.name}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <p className="text-sm text-muted-foreground">
+                      {project.description}
+                    </p>
 
-                  {/* Project Details */}
-                  <div className="p-8 lg:p-12 space-y-6">
+                    {/* Technologies */}
                     <div>
-                      <h4 className="text-xl font-semibold mb-3">О проекте</h4>
-                      <p className="text-muted-foreground">
-                        {project.description}
-                      </p>
-                    </div>
-
-                    <div>
-                      <h4 className="text-lg font-semibold mb-3">Технологии</h4>
+                      <h4 className="text-sm font-semibold mb-2">
+                        Технологии:
+                      </h4>
                       <div className="flex flex-wrap gap-2">
-                        {project.tech.map((tech, index) => (
-                          <Badge key={index} variant="outline">
+                        {project.tech.map((tech, techIndex) => (
+                          <Badge
+                            key={techIndex}
+                            variant="outline"
+                            className="text-xs"
+                          >
                             {tech}
                           </Badge>
                         ))}
                       </div>
                     </div>
 
-                    <div>
-                      <h4 className="text-lg font-semibold mb-3">Результаты</h4>
-                      <div className="grid grid-cols-1 gap-3">
-                        <div className="flex justify-between">
-                          <span className="text-muted-foreground">
-                            Срок реализации:
-                          </span>
-                          <span className="font-medium">
-                            {project.stats.duration}
-                          </span>
-                        </div>
-                        <div className="flex justify-between">
-                          <span className="text-muted-foreground">
-                            Улучшение:
-                          </span>
-                          <span className="font-medium text-green-600">
-                            {project.stats.increase}
-                          </span>
-                        </div>
-                        <div className="flex justify-between">
-                          <span className="text-muted-foreground">
-                            Конверсия:
-                          </span>
-                          <span className="font-medium text-green-600">
-                            {project.stats.conversion}
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-
-                    <Button
-                      className="w-full"
-                      onClick={() => window.open(project.url, "_blank")}
-                    >
-                      Смотреть подробнее
-                      <ExternalLink className="ml-2 h-4 w-4" />
-                    </Button>
-                  </div>
-                </div>
-              </Card>
-
-              {/* Navigation */}
-              <div className="flex justify-between items-center mt-8">
-                <Button
-                  variant="outline"
-                  onClick={prevProject}
-                  className="flex items-center"
-                >
-                  <ChevronLeft className="mr-2 h-4 w-4" />
-                  Предыдущий
-                </Button>
-
-                <div className="text-center">
-                  <p className="text-muted-foreground">
-                    {currentProject + 1} из {currentCategory.projects.length}
-                  </p>
-                  <div className="flex space-x-2 mt-2">
-                    {currentCategory.projects.map((_, index) => (
-                      <button
-                        key={index}
-                        onClick={() => setCurrentProject(index)}
-                        className={`w-2 h-2 rounded-full transition-colors ${
-                          index === currentProject ? "bg-primary" : "bg-muted"
-                        }`}
-                      />
-                    ))}
-                  </div>
-                </div>
-
-                <Button
-                  variant="outline"
-                  onClick={nextProject}
-                  className="flex items-center"
-                >
-                  Следующий
-                  <ChevronRight className="ml-2 h-4 w-4" />
-                </Button>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* All Projects Grid */}
-        <section className="py-20 bg-muted/30">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-foreground mb-4">
-                Все проекты категории
-              </h2>
-              <p className="text-muted-foreground">
-                Краткий обзор всех проектов в выбранной категории
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-8">
-              {currentCategory.projects.map((proj, index) => (
-                <Card
-                  key={index}
-                  className={`cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1 ${
-                    index === currentProject ? "ring-2 ring-primary" : ""
-                  }`}
-                  onClick={() => setCurrentProject(index)}
-                >
-                  <CardHeader>
-                    <div className="w-full h-32 bg-gradient-to-br from-primary/10 to-primary/5 rounded-lg mb-4 flex items-center justify-center">
-                      <span className="text-2xl font-bold text-primary">
-                        {proj.name.charAt(0)}
-                      </span>
-                    </div>
-                    <CardTitle className="text-lg">{proj.name}</CardTitle>
-                    <Badge variant="secondary" className="w-fit">
-                      {proj.type}
-                    </Badge>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-sm text-muted-foreground mb-4 line-clamp-3">
-                      {proj.description}
-                    </p>
                     <Button
                       variant="outline"
-                      className="w-full"
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        window.open(proj.url, "_blank");
-                      }}
+                      className="w-full group-hover:bg-primary/5 group-hover:text-primary transition-colors"
+                      onClick={() => window.open(project.url, "_blank")}
                     >
                       Смотреть подробнее
                       <ExternalLink className="ml-2 h-3 w-3" />
@@ -405,8 +273,8 @@ export default function Portfolio() {
               Готовы создать свой проект?
             </h2>
             <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Свяжите��ь с нами для обсуждения деталей вашего проекта и
-              получения персонального предложения
+              Свяжитесь с нами для обсуждения деталей вашего проекта и получения
+              персонального предложения
             </p>
             <Button size="lg">Начать проект</Button>
           </div>
