@@ -146,7 +146,18 @@ const AdvantagesSection = () => {
         </div>
 
         <div className="text-center mt-16">
-          <Button size="lg">Начать сотрудничество</Button>
+          <Button
+            size="lg"
+            onClick={() => {
+              const contactsSection =
+                document.getElementById("contacts-section");
+              if (contactsSection) {
+                contactsSection.scrollIntoView({ behavior: "smooth" });
+              }
+            }}
+          >
+            Начать сотрудничество
+          </Button>
         </div>
       </div>
     </section>
