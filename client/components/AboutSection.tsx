@@ -54,7 +54,11 @@ const AboutSection = () => {
   ];
 
   return (
-    <section id="about" className="py-20 lg:py-32 bg-muted/30">
+    <section
+      id="about"
+      className="py-[30px] lg:py-[50px] bg-gradient-to-br from-muted/20 via-background to-primary/5 relative"
+    >
+      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-transparent to-purple-500/5"></div>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center space-y-4 mb-16">
           <Badge variant="outline" className="mb-4">
@@ -109,7 +113,7 @@ const AboutSection = () => {
             <div className="space-y-4 text-muted-foreground">
               <p>
                 BitrixPro была основана с целью помочь российским компаниям
-                эффективно использовать возможности пла��формы 1С-Битрикс для
+                эффективно использовать возможности платформы 1С-Битрикс для
                 роста и развития своего бизнеса.
               </p>
               <p>
@@ -127,7 +131,7 @@ const AboutSection = () => {
             <Card className="p-8 bg-gradient-to-br from-primary/5 to-primary/10 border-primary/20">
               <CardContent className="p-0 space-y-4">
                 <div className="text-lg font-semibold text-foreground">
-                  Сертификации и партнерства
+                  Сертификации и пар��нерства
                 </div>
                 <div className="space-y-3">
                   <div className="flex items-center space-x-3">

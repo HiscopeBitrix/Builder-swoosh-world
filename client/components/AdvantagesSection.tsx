@@ -23,7 +23,7 @@ const AdvantagesSection = () => {
     },
     {
       icon: Users,
-      title: "Профессион��лизм",
+      title: "Профессионализм",
       description:
         "Команда сертифицированных разработчиков с многолетним опытом работы с платформой 1С-Битрикс",
       image: "👥",
@@ -55,14 +55,15 @@ const AdvantagesSection = () => {
   };
 
   return (
-    <section className="py-20 lg:py-32 bg-muted/30">
+    <section className="py-[30px] lg:py-[50px] bg-gradient-to-br from-background via-muted/20 to-background relative">
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 via-transparent to-red-500/5"></div>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center space-y-4 mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold text-foreground">
             Преимущества работы с нами
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Почему клиенты выбирают нас для реализации своих в��б-проектов
+            Почему клиенты выбирают нас для реализации своих веб-проектов
           </p>
         </div>
 
