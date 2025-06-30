@@ -30,7 +30,6 @@ const Footer = () => {
   const contactInfo = [
     { icon: Phone, text: "+7 (495) 123-45-67" },
     { icon: Mail, text: "info@it-mechta.ru" },
-    { icon: MapPin, text: "г. Москва, ул. Примерная, 123" },
     { icon: Clock, text: "Пн-Пт: 9:00 - 18:00" },
   ];
 

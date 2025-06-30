@@ -20,6 +20,9 @@ import CrmSetup from "./pages/services/CrmSetup";
 import Analytics from "./pages/services/Analytics";
 import Automation from "./pages/services/Automation";
 import Integrations from "./pages/services/Integrations";
+import Privacy from "./pages/Privacy";
+import Terms from "./pages/Terms";
+import DataProcessing from "./pages/DataProcessing";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -45,6 +48,9 @@ const App = () => (
         <Route path="/services/integrations" element={<Integrations />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/contacts" element={<Contacts />} />
+        <Route path="/privacy" element={<Privacy />} />
+        <Route path="/terms" element={<Terms />} />
+        <Route path="/data-processing" element={<DataProcessing />} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
       </Routes>
