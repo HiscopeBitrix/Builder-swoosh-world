@@ -1,19 +1,16 @@
-import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
-import FormModal from "./FormModal";
 
 const PortfolioSection = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
   const featuredProjects = [
     {
       title: "Корпоративный сайт производственной компании",
       category: "Корпоративный сайт",
       description:
-        "Современный сайт с каталогом продукции и интеграцией с CRM системой",
+        "Современный сайт с каталогом продукции и инт��грацией с CRM системой",
       tech: ["1С-Битрикс", "Адаптивный дизайн", "CRM интеграция"],
       logo: {
         name: "ТехноПром",
@@ -122,9 +119,9 @@ const PortfolioSection = () => {
                   <Button
                     variant="ghost"
                     className="w-full group-hover:bg-primary/5 group-hover:text-primary transition-colors"
-                    onClick={() => setIsModalOpen(true)}
+                    onClick={() => window.open("https://example.com", "_blank")}
                   >
-                    Заказать подобный
+                    Смотреть подробнее
                     <ExternalLink className="ml-2 h-3 w-3" />
                   </Button>
                 </CardContent>
@@ -146,13 +143,6 @@ const PortfolioSection = () => {
           </div>
         </div>
       </section>
-
-      <FormModal
-        isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
-        title="Заказать подобный проект"
-        buttonText="Отправить заявку"
-      />
     </>
   );
 };

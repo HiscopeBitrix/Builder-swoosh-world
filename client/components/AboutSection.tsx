@@ -9,14 +9,14 @@ const AboutSection = () => {
   const stats = [
     {
       icon: Users,
-      number: "100+",
+      number: "50+",
       label: "Довольных клиентов",
       description: "Компании доверяют нам свои проекты",
     },
     {
       icon: Award,
-      number: "8",
-      label: "Лет на рынке",
+      number: "3",
+      label: "Года на рынке",
       description: "Опыт работы с платформой 1С-Битрикс",
     },
     {
@@ -27,7 +27,7 @@ const AboutSection = () => {
     },
     {
       icon: TrendingUp,
-      number: "200+",
+      number: "100+",
       label: "Проектов",
       description: "Успешно реализованных решений",
     },
@@ -121,12 +121,12 @@ const AboutSection = () => {
                   роста и развития своего бизнеса.
                 </p>
                 <p>
-                  Мы начинали как небольшая команда энтузиастов, но за 8 лет
+                  Мы начинали как небольшая команда энтузиастов, но за 3 года
                   выросли в компанию с устоявшимися процессами и глубокой
                   экспертизой в области веб-разработки и автоматизации.
                 </p>
                 <p>
-                  Сегодня мы гордимся тем, что помогли более чем 100 компаниям
+                  Сегодня мы гордимся тем, что помогли более чем 50 компаниям
                   реализовать их цифровые амбиции и достичь новых высот в
                   бизнесе.
                 </p>
@@ -134,28 +134,34 @@ const AboutSection = () => {
             </div>
             <div className="relative">
               <Card className="p-8 bg-gradient-to-br from-primary/5 to-primary/10 border-primary/20">
-                <CardContent className="p-0 space-y-4">
+                <CardContent className="p-0 space-y-6">
                   <div className="text-lg font-semibold text-foreground">
-                    Сертификации и партнерства
+                    Наш подход к работе
                   </div>
-                  <div className="space-y-3">
-                    <div className="flex items-center space-x-3">
-                      <div className="w-2 h-2 bg-primary rounded-full"></div>
-                      <span className="text-muted-foreground">
-                        Сертифицированный партнер 1С-Битрикс
-                      </span>
+                  <div className="space-y-4">
+                    <div className="space-y-2">
+                      <div className="text-sm font-medium text-foreground">
+                        Анализ и планирование
+                      </div>
+                      <p className="text-xs text-muted-foreground">
+                        Глубокое изучение потребностей бизнеса
+                      </p>
                     </div>
-                    <div className="flex items-center space-x-3">
-                      <div className="w-2 h-2 bg-primary rounded-full"></div>
-                      <span className="text-muted-foreground">
-                        Авторизованный партнер Bitrix24
-                      </span>
+                    <div className="space-y-2">
+                      <div className="text-sm font-medium text-foreground">
+                        Современные технологии
+                      </div>
+                      <p className="text-xs text-muted-foreground">
+                        Используем проверенные решения 1С-Битрикс
+                      </p>
                     </div>
-                    <div className="flex items-center space-x-3">
-                      <div className="w-2 h-2 bg-primary rounded-full"></div>
-                      <span className="text-muted-foreground">
-                        Член ассоциации веб-разработчиков
-                      </span>
+                    <div className="space-y-2">
+                      <div className="text-sm font-medium text-foreground">
+                        Долгосрочная поддержка
+                      </div>
+                      <p className="text-xs text-muted-foreground">
+                        Сопровождаем проекты после запуска
+                      </p>
                     </div>
                   </div>
                 </CardContent>
