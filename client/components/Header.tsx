@@ -20,7 +20,8 @@ const Header = () => {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex h-16 items-center justify-between">
+        {/* Desktop Layout */}
+        <div className="hidden md:flex h-16 items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
             <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center">
@@ -32,7 +33,7 @@ const Header = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="flex items-center space-x-8">
             {navigation.map((item) => (
               <Link
                 key={item.name}
@@ -47,24 +48,39 @@ const Header = () => {
           </nav>
 
           {/* CTA Button */}
-          <div className="hidden md:flex">
-            <Button>Получить консультацию</Button>
-          </div>
+          <Button>Получить консультацию</Button>
+        </div>
 
-          {/* Mobile menu button */}
-          <div className="md:hidden">
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-            >
-              {isMenuOpen ? (
-                <X className="h-5 w-5" />
-              ) : (
-                <Menu className="h-5 w-5" />
-              )}
-            </Button>
-          </div>
+        {/* Mobile Layout */}
+        <div className="md:hidden flex h-16 items-center justify-between">
+          {/* Mobile menu button - Left */}
+          <Button
+            variant="ghost"
+            size="sm"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="p-2"
+          >
+            {isMenuOpen ? (
+              <X className="h-5 w-5" />
+            ) : (
+              <Menu className="h-5 w-5" />
+            )}
+          </Button>
+
+          {/* Logo - Center */}
+          <Link to="/" className="flex items-center space-x-2">
+            <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center">
+              <span className="text-primary-foreground font-bold text-sm">
+                1C
+              </span>
+            </div>
+            <span className="font-bold text-xl text-foreground">BitrixPro</span>
+          </Link>
+
+          {/* Call button - Right */}
+          <Button variant="ghost" size="sm" className="p-2">
+            <Phone className="h-5 w-5" />
+          </Button>
         </div>
 
         {/* Mobile Navigation */}
