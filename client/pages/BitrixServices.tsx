@@ -1,7 +1,8 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
+import FormModal from "@/components/FormModal";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -9,6 +10,8 @@ import { ArrowRight, Code, Wrench, Zap, Settings } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function BitrixServices() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -16,7 +19,7 @@ export default function BitrixServices() {
   const bitrixServices = [
     {
       icon: Code,
-      title: "Разработка корпорати��ных сайтов",
+      title: "Разработка корпоративных сайтов",
       description:
         "Создаем современные корпоративные сайты на платформе 1С-Битрикс с учетом всех требований бизнеса",
       features: [
@@ -87,11 +90,18 @@ export default function BitrixServices() {
               <Button
                 size="lg"
                 className="bg-gradient-to-r from-blue-500 to-red-600"
+                onClick={() => setIsModalOpen(true)}
               >
                 Получить консультацию
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
-              <Button variant="outline" size="lg">
+              <Button
+                variant="outline"
+                size="lg"
+                onClick={() => {
+                  window.location.href = "/portfolio";
+                }}
+              >
                 Смотреть портфолио
               </Button>
             </div>
@@ -172,6 +182,7 @@ export default function BitrixServices() {
                         <Button
                           size="sm"
                           className={`bg-gradient-to-r ${service.gradient} hover:opacity-90 text-xs px-6`}
+                          onClick={() => setIsModalOpen(true)}
                         >
                           Заказать
                         </Button>
@@ -230,6 +241,13 @@ export default function BitrixServices() {
       </main>
       <Footer />
       <ScrollToTop />
+
+      <FormModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        title="Заказать услугу 1С-Битрикс"
+        buttonText="Отправить заявку"
+      />
     </div>
   );
 }
