@@ -10,6 +10,13 @@ import Services from "./pages/Services";
 import Portfolio from "./pages/Portfolio";
 import Contacts from "./pages/Contacts";
 import CorporateSites from "./pages/services/CorporateSites";
+import Ecommerce from "./pages/services/Ecommerce";
+import Support from "./pages/services/Support";
+import Development from "./pages/services/Development";
+import CrmSetup from "./pages/services/CrmSetup";
+import Analytics from "./pages/services/Analytics";
+import Automation from "./pages/services/Automation";
+import Integrations from "./pages/services/Integrations";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -23,6 +30,13 @@ const App = () => (
         <Route path="/" element={<Index />} />
         <Route path="/services" element={<Services />} />
         <Route path="/services/corporate-sites" element={<CorporateSites />} />
+        <Route path="/services/ecommerce" element={<Ecommerce />} />
+        <Route path="/services/support" element={<Support />} />
+        <Route path="/services/development" element={<Development />} />
+        <Route path="/services/crm-setup" element={<CrmSetup />} />
+        <Route path="/services/analytics" element={<Analytics />} />
+        <Route path="/services/automation" element={<Automation />} />
+        <Route path="/services/integrations" element={<Integrations />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/contacts" element={<Contacts />} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
