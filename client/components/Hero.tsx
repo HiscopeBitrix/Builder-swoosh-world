@@ -51,7 +51,7 @@ const Hero = () => {
 
   const benefits = [
     "Опыт работы более 8 лет",
-    "100+ у��пешных проектов",
+    "100+ успешных проектов",
     "Поддержка 24/7",
     "Гарантия качества",
   ];
@@ -70,17 +70,11 @@ const Hero = () => {
     <>
       <section className="relative overflow-hidden bg-gradient-to-br from-background via-background to-primary/10 py-[50px] lg:py-[50px]">
         {/* Decorative Elements */}
-        <div
-          className="absolute inset-0 bg-gradient-to-r from-purple-500/5 via-transparent to-cyan-500/5"
-          style={{ top: "2px" }}
-        ></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 via-transparent to-cyan-500/5" style={{ top: '2px' }}></div>
         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-500 via-red-500 to-cyan-500"></div>
 
         <div className="container relative mx-auto px-4 sm:px-6 lg:px-8">
-          <div
-            className="grid lg:grid-cols-2 gap-12 items-center"
-            style={{ margin: "71px 0 98px" }}
-          >
+          <div className="grid lg:grid-cols-2 gap-12 items-center" style={{ margin: '71px 0 98px' }}>
             {/* Content */}
             <div className="space-y-8">
               <div className="space-y-4">
@@ -105,7 +99,10 @@ const Hero = () => {
               <div className="grid sm:grid-cols-2 gap-3 pt-4">
                 {benefits.map((benefit, index) => (
                   <div key={index} className="flex items-center space-x-2">
-                    <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
+                    <CheckCircle
+                      className="h-5 w-5 flex-shrink-0 transition-colors duration-700"
+                      style={{ color: currentContent.color }}
+                    />
                     <span className="text-sm text-muted-foreground">
                       {benefit}
                     </span>
@@ -116,11 +113,18 @@ const Hero = () => {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button
                   size="lg"
-                  className="group bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90"
+                  className="group hover:opacity-90 transition-all duration-700"
+                  style={{
+                    background: `linear-gradient(135deg, ${currentContent.color}, ${currentContent.color}CC)`,
+                    color: 'white'
+                  }}
                   onClick={() => setIsModalOpen(true)}
                 >
                   Заказать услугу
-                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  <ArrowRight
+                    className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1"
+                    style={{ color: 'white' }}
+                  />
                 </Button>
                 <Button variant="outline" size="lg">
                   Смотреть портфолио
@@ -128,17 +132,16 @@ const Hero = () => {
               </div>
             </div>
 
-            {/* Enhanced Visual */}
-            <div className="relative">
-              <div className="relative z-10 bg-card/80 backdrop-blur border rounded-2xl p-8 shadow-2xl overflow-hidden">
-                {/* Animated Background */}
-                <div
-                  className="absolute inset-0 opacity-10 transition-all duration-700"
-                  style={{
-                    background: `linear-gradient(135deg, ${currentContent.color}20, transparent)`,
-                  }}
-                ></div>
-
+          {/* Enhanced Visual */}
+          <div className="relative">
+            {/* Surrounding Gradient */}
+            <div
+              className="absolute -inset-8 rounded-3xl blur-2xl opacity-20 transition-all duration-700"
+              style={{
+                background: `radial-gradient(circle, ${currentContent.color}40, transparent 70%)`,
+              }}
+            ></div>
+            <div className="relative z-10 bg-card/80 backdrop-blur border rounded-2xl p-8 shadow-2xl overflow-hidden">
                 <div className="relative space-y-6">
                   <div className="flex items-center space-x-2">
                     <div className="h-3 w-3 rounded-full bg-red-500"></div>
@@ -182,7 +185,26 @@ const Hero = () => {
                       }}
                     ></div>
                   </div>
+                  </div>
                 </div>
+
+                {/* Animated Background - moved to end */}
+                <div
+                  className="absolute inset-0 opacity-10 transition-all duration-700"
+                  style={{
+                    background: `linear-gradient(135deg, ${currentContent.color}20, transparent)`,
+                  }}
+                ></div>
+              </div>
+
+              {/* Dynamic Border Gradient */}
+              <div
+                className="absolute inset-0 rounded-2xl p-[2px] transition-all duration-700"
+                style={{
+                  background: `linear-gradient(135deg, ${currentContent.color}40, transparent, ${currentContent.color}20)`,
+                }}
+              >
+                <div className="w-full h-full bg-card/80 backdrop-blur rounded-2xl"></div>
               </div>
 
               {/* Floating Elements */}
