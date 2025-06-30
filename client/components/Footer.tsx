@@ -29,7 +29,7 @@ const Footer = () => {
 
   const contactInfo = [
     { icon: Phone, text: "+7 (495) 123-45-67" },
-    { icon: Mail, text: "info@bitrixpro.ru" },
+    { icon: Mail, text: "info@it-mechta.ru" },
     { icon: MapPin, text: "г. Москва, ул. Примерная, 123" },
     { icon: Clock, text: "Пн-Пт: 9:00 - 18:00" },
   ];
@@ -48,7 +48,7 @@ const Footer = () => {
                   </span>
                 </div>
                 <span className="font-bold text-xl text-foreground">
-                  BitrixPro
+                  IT-Мечта
                 </span>
               </Link>
               <p className="text-muted-foreground text-sm">
@@ -124,7 +124,7 @@ const Footer = () => {
                   onClick={() => setIsCallModalOpen(true)}
                 >
                   <Phone className="mr-2 h-4 w-4" />
-                  Заказать звонок
+                  Заказ��ть звонок
                 </Button>
               </div>
             </div>
@@ -134,7 +134,7 @@ const Footer = () => {
           <div className="mt-12 pt-8 border-t">
             <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
               <div className="text-sm text-muted-foreground">
-                © 2024 BitrixPro. Все права защищены.
+                © 2024 IT-Мечта. Все права защищены.
               </div>
               <div className="flex flex-wrap gap-4">
                 {navigation.legal.map((item, index) => (
