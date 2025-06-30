@@ -132,7 +132,13 @@ const Hero = () => {
                     style={{ color: "white" }}
                   />
                 </Button>
-                <Button variant="outline" size="lg">
+                <Button
+                  variant="outline"
+                  size="lg"
+                  onClick={() => {
+                    window.location.href = "/portfolio";
+                  }}
+                >
                   Смотреть портфолио
                 </Button>
               </div>
