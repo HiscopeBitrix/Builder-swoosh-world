@@ -28,7 +28,7 @@ const Footer = () => {
   };
 
   const contactInfo = [
-    { icon: Phone, text: "+7 (495) 123-45-67" },
+    { icon: Phone, text: "+7 (995) 118-26-21" },
     { icon: Mail, text: "info@it-mechta.ru" },
     { icon: Clock, text: "Пн-Пт: 9:00 - 18:00" },
   ];
@@ -113,18 +113,10 @@ const Footer = () => {
                   Получить консультацию
                 </Button>
                 <Button
-                  variant="outline"
-                  className="w-full"
-                  onClick={() => setIsCallModalOpen(true)}
-                >
-                  <Phone className="mr-2 h-4 w-4" />
-                  Заказать звонок
-                </Button>
-                <Button
                   variant="secondary"
                   className="w-full"
                   onClick={() =>
-                    window.open("https://t.me/it_mechta_support", "_blank")
+                    window.open("https://t.me/hiscope_1", "_blank")
                   }
                 >
                   Написать в Telegram
@@ -137,7 +129,7 @@ const Footer = () => {
           <div className="mt-12 pt-8 border-t">
             <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
               <div className="text-sm text-muted-foreground">
-                © 2024 IT-Мечта. Все права защищены.
+                © 2025 IT-Мечта. Все права защищены.
               </div>
               <div className="flex flex-wrap gap-4">
                 {navigation.legal.map((item, index) => (
@@ -162,12 +154,6 @@ const Footer = () => {
         buttonText="Отправить заявку"
       />
 
-      <FormModal
-        isOpen={isCallModalOpen}
-        onClose={() => setIsCallModalOpen(false)}
-        title="Заказать звонок"
-        buttonText="Заказать звонок"
-      />
     </>
   );
 };

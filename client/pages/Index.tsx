@@ -26,8 +26,7 @@ export default function Index() {
         <ServicesSection />
 
         {/* 5. Портфолио */}
-        <PortfolioSection />
-
+        {/* <PortfolioSection /> */}
         {/* 6. Контакты с формой (без карты) */}
         <ContactsSection />
       </main>

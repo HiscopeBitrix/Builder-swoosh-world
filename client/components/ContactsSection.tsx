@@ -15,7 +15,7 @@ const ContactsSection = () => {
     {
       icon: Phone,
       title: "Телефон",
-      info: "+7 (495) 123-45-67",
+      info: "+7 995 118 26 21",
       subInfo: "Звоните в рабочее время",
     },
     {
@@ -27,7 +27,7 @@ const ContactsSection = () => {
     {
       icon: MessageCircle,
       title: "Telegram",
-      info: "@it_mechta_support",
+      info: "@Hiscope_1",
       subInfo: "Быстрые ответы 24/7",
     },
     {

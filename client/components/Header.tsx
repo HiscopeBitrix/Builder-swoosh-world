@@ -13,7 +13,6 @@ const Header = () => {
     { name: "1С Bitrix", href: "/services/bitrix" },
     { name: "Bitrix 24", href: "/services/bitrix24" },
     { name: "О компании", href: "/about" },
-    { name: "Портфолио", href: "/portfolio" },
     { name: "Контакты", href: "/contacts" },
   ];
 

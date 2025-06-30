@@ -117,7 +117,7 @@ const AboutSection = () => {
               <div className="space-y-4 text-muted-foreground">
                 <p>
                   IT-Мечта была основана с целью помочь российским компаниям
-                  эффективно использовать ��озможности платформы 1С-Битрикс для
+                  эффективно использовать возможности платформы 1С-Битрикс для
                   роста и развития своего бизнеса.
                 </p>
                 <p>
@@ -169,26 +169,6 @@ const AboutSection = () => {
             </div>
           </div>
 
-          {/* Values Grid */}
-          <div>
-            <h3 className="text-2xl font-bold text-foreground text-center mb-8">
-              Наши ценности
-            </h3>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {values.map((value, index) => (
-                <Card key={index} className="hover:shadow-lg transition-shadow">
-                  <CardContent className="p-6 space-y-3">
-                    <h4 className="text-lg font-semibold text-foreground">
-                      {value.title}
-                    </h4>
-                    <p className="text-sm text-muted-foreground">
-                      {value.description}
-                    </p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
         </div>
       </section>
 
