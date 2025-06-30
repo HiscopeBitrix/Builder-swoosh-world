@@ -123,7 +123,16 @@ const Footer = () => {
                   onClick={() => setIsCallModalOpen(true)}
                 >
                   <Phone className="mr-2 h-4 w-4" />
-                  Заказ��ть звонок
+                  Заказать звонок
+                </Button>
+                <Button
+                  variant="secondary"
+                  className="w-full"
+                  onClick={() =>
+                    window.open("https://t.me/it_mechta_support", "_blank")
+                  }
+                >
+                  Написать в Telegram
                 </Button>
               </div>
             </div>
