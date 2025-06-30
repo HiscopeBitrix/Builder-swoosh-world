@@ -69,7 +69,7 @@ const AboutSection = () => {
               О компании
             </Badge>
             <h2 className="text-3xl lg:text-4xl font-bold text-foreground">
-              BitrixPro - Ваш надежный партнер
+              IT-Мечта - Ваш надежный партнер
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Мы специализируемся на создании и развитии веб-решений на
@@ -116,8 +116,8 @@ const AboutSection = () => {
               </h3>
               <div className="space-y-4 text-muted-foreground">
                 <p>
-                  BitrixPro была основана с целью помочь российским компаниям
-                  эффективно использовать возможности платформы 1С-Битрикс для
+                  IT-Мечта была основана с целью помочь российским компаниям
+                  эффективно использовать ��озможности платформы 1С-Битрикс для
                   роста и развития своего бизнеса.
                 </p>
                 <p>
@@ -166,7 +166,7 @@ const AboutSection = () => {
           {/* Values Grid */}
           <div>
             <h3 className="text-2xl font-bold text-foreground text-center mb-8">
-              ��аши ценности
+              Наши ценности
             </h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {values.map((value, index) => (
