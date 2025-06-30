@@ -25,10 +25,10 @@ const ContactsSection = () => {
       subInfo: "Отвечаем в течение часа",
     },
     {
-      icon: MapPin,
-      title: "Адрес",
-      info: "г. Москва, ул. Примерная, 123",
-      subInfo: "Офис 456, 10 этаж",
+      icon: MessageCircle,
+      title: "Telegram",
+      info: "@it_mechta_support",
+      subInfo: "Быстрые ответы 24/7",
     },
     {
       icon: Clock,
@@ -191,7 +191,7 @@ const ContactsSection = () => {
                 <p className="text-xs text-muted-foreground text-center">
                   Нажимая кнопку, вы соглашаетесь с{" "}
                   <span className="underline cursor-pointer">
-                    обработкой персональных данных
+                    обработкой персональн��х данных
                   </span>
                 </p>
               </CardContent>
