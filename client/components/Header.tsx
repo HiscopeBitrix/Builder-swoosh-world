@@ -51,7 +51,10 @@ const Header = () => {
                 >
                   {item.name === "1С Bitrix" ? (
                     <>
-                      <div className="w-6 h-6 bg-gradient-to-r from-blue-500 to-red-600 rounded flex items-center justify-center">
+                      <div
+                        className="w-6 h-6 rounded flex items-center justify-center"
+                        style={{ backgroundColor: "#d91935" }}
+                      >
                         <span className="text-white font-bold text-xs">1C</span>
                       </div>
                       <span>1С Bitrix</span>
