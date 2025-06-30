@@ -28,14 +28,14 @@ export default function About() {
   const stats = [
     {
       icon: Users,
-      number: "100+",
-      label: "Дов��льных клиентов",
+      number: "50+",
+      label: "Довольных клиентов",
       description: "Компании доверяют нам свои проекты",
     },
     {
       icon: Award,
-      number: "8",
-      label: "Лет на рынке",
+      number: "3",
+      label: "Года на рынке",
       description: "Опыт работы с платформой 1С-Битрикс",
     },
     {
@@ -46,7 +46,7 @@ export default function About() {
     },
     {
       icon: TrendingUp,
-      number: "200+",
+      number: "100+",
       label: "Проектов",
       description: "Успешно реализованных решений",
     },
