@@ -21,7 +21,7 @@ const ContactsSection = () => {
     {
       icon: Mail,
       title: "Email",
-      info: "info@bitrixpro.ru",
+      info: "info@it-mechta.ru",
       subInfo: "Отвечаем в течение часа",
     },
     {
