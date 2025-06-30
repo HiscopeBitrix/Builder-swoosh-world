@@ -17,7 +17,7 @@ export default function Contacts() {
     {
       icon: Mail,
       title: "Email",
-      details: ["info@bitrixpro.ru", "support@bitrixpro.ru"],
+      details: ["info@it-mechta.ru", "support@it-mechta.ru"],
     },
     {
       icon: MapPin,
