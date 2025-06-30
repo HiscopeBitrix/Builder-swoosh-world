@@ -83,37 +83,6 @@ export default function About() {
     },
   ];
 
-  const team = [
-    {
-      name: "Алексей Петров",
-      role: "Технический директор",
-      experience: "12 лет опыта",
-      avatar: "👨‍💻",
-      gradient: "from-blue-500 to-blue-700",
-    },
-    {
-      name: "Мария Иванова",
-      role: "Руководитель проектов",
-      experience: "8 лет опыта",
-      avatar: "👩‍💼",
-      gradient: "from-purple-500 to-purple-700",
-    },
-    {
-      name: "Дмитрий Сидоров",
-      role: "Ведущий разработчик",
-      experience: "10 лет опыта",
-      avatar: "👨‍🔧",
-      gradient: "from-green-500 to-green-700",
-    },
-    {
-      name: "Елена Козлова",
-      role: "UX/UI дизайнер",
-      experience: "6 лет опыта",
-      avatar: "👩‍🎨",
-      gradient: "from-pink-500 to-pink-700",
-    },
-  ];
-
   return (
     <div className="min-h-screen">
       <Header />
