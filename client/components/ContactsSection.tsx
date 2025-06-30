@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Badge } from "@/components/ui/badge";
-import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import { Phone, Mail, MessageCircle, Clock } from "lucide-react";
 import FormModal from "./FormModal";
 
 const ContactsSection = () => {
