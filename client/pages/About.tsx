@@ -121,7 +121,7 @@ export default function About() {
                       window.location.href = "/portfolio";
                     }}
                   >
-                    Наши проекты
+                    На��и проекты
                     <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </Button>
                   <Button
@@ -187,7 +187,7 @@ export default function About() {
                     </p>
                     <p>
                       <strong className="text-foreground">История:</strong> Мы
-                      начинали как небольшая команда энтузиастов, но за 8 лет
+                      начинали как небольшая команда энтузиастов, но за 3 года
                       выросли в компанию с устоявшимися процессами и глубокой
                       экспертизой.
                     </p>
@@ -198,31 +198,31 @@ export default function About() {
               <Card className="bg-gradient-to-br from-primary/5 to-accent/5 border-primary/20">
                 <CardContent className="p-8 space-y-6">
                   <h3 className="text-xl font-semibold text-foreground">
-                    Сертификации и партнерства
+                    Наши достижения
                   </h3>
                   <div className="space-y-4">
                     <div className="flex items-center space-x-3">
                       <div className="w-3 h-3 bg-primary rounded-full"></div>
                       <span className="text-muted-foreground">
-                        Сертифицированный партнер 1С-Битрикс
+                        100+ успешно выполненных проектов
                       </span>
                     </div>
                     <div className="flex items-center space-x-3">
                       <div className="w-3 h-3 bg-primary rounded-full"></div>
                       <span className="text-muted-foreground">
-                        Авторизованный партнер Bitrix24
+                        50+ довольных клиентов по всей России
                       </span>
                     </div>
                     <div className="flex items-center space-x-3">
                       <div className="w-3 h-3 bg-primary rounded-full"></div>
                       <span className="text-muted-foreground">
-                        Член ассоциации веб-разработчиков
+                        Специализация на 1С-Битрикс и Bitrix24
                       </span>
                     </div>
                     <div className="flex items-center space-x-3">
                       <div className="w-3 h-3 bg-primary rounded-full"></div>
                       <span className="text-muted-foreground">
-                        Золотой партнер Microsoft
+                        Круглосуточная техническая поддержка
                       </span>
                     </div>
                   </div>
