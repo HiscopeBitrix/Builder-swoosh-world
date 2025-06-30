@@ -275,8 +275,8 @@ export default function About() {
           </div>
         </section>
 
-        {/* Team */}
-        <section className="py-20 lg:py-32 bg-gradient-to-br from-muted/20 via-background to-accent/5">
+        {/* CTA */}
+        <section className="py-20 bg-gradient-to-br from-primary/5 to-accent/5">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
