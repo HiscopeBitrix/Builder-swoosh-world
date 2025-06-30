@@ -131,7 +131,7 @@ export default function About() {
                     О компании
                   </Badge>
                   <h1 className="text-4xl lg:text-6xl font-bold text-foreground leading-tight">
-                    BitrixPro -{" "}
+                    IT-Мечта -{" "}
                     <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                       Ваш надежный партнер
                     </span>
@@ -206,15 +206,15 @@ export default function About() {
                   <div className="space-y-4 text-muted-foreground">
                     <p>
                       <strong className="text-foreground">Миссия:</strong>{" "}
-                      BitrixPro была основана с целью помочь российским
-                      компаниям эффективно использовать возможности платформы
-                      1С-Битрикс для роста и развития своего бизнеса.
+                      IT-Мечта была основана с целью помочь российским компаниям
+                      эффективно использовать возможности платформы 1С-Битрикс
+                      для роста и развития своего бизнеса.
                     </p>
                     <p>
                       <strong className="text-foreground">Видение:</strong> Мы
                       стремимся стать ведущим партнером для компаний, которые
                       хотят цифровизировать свои процессы и получить
-                      конкурен��ные преимущества.
+                      конкурентные преимущества.
                     </p>
                     <p>
                       <strong className="text-foreground">История:</strong> Мы
@@ -314,7 +314,7 @@ export default function About() {
                 Наша команда
               </h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                Профессионалы, которые воплощают ваши идеи в жизнь
+                Проф��ссионалы, которые воплощают ваши идеи в жизнь
               </p>
             </div>
 
