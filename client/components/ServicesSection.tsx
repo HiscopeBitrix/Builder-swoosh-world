@@ -135,7 +135,7 @@ const ServicesSection = () => {
               Наши услуги
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Предоставляем полный спектр услуг по ра��работке, поддержке и
+              Предоставляем полный спектр услуг по разработке, поддержке и
               доработке веб-решений на платформе 1С-Битрикс
             </p>
           </div>
@@ -229,9 +229,11 @@ const ServicesSection = () => {
             <Button
               size="lg"
               className="bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90"
-              onClick={() => setIsModalOpen(true)}
+              onClick={() => {
+                window.location.href = "/services";
+              }}
             >
-              Заказать консультацию
+              Все услуги
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
           </div>
