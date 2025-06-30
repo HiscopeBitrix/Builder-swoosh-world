@@ -15,7 +15,11 @@ const PortfolioSection = () => {
       description:
         "Современный сайт с каталогом продукции и интеграцией с CRM системой",
       tech: ["1С-Битрикс", "Адаптивный дизайн", "CRM интеграция"],
-      image: "🏭",
+      logo: {
+        name: "ТехноПром",
+        colors: ["#2563eb", "#1d4ed8"],
+        icon: "T",
+      },
     },
     {
       title: "Интернет-магазин спортивных товаров",
@@ -23,7 +27,11 @@ const PortfolioSection = () => {
       description:
         "Полнофункциональный интернет-магазин с системой управления заказами",
       tech: ["1С-Битрикс", "E-commerce", "Платежные системы"],
-      image: "🏪",
+      logo: {
+        name: "SportZone",
+        colors: ["#dc2626", "#b91c1c"],
+        icon: "S",
+      },
     },
     {
       title: "Автоматизация продаж для IT-компании",
@@ -31,7 +39,11 @@ const PortfolioSection = () => {
       description:
         "Настройка CRM и автоматизация процессов продаж с увеличением конверсии",
       tech: ["Bitrix 24", "CRM", "Автоматизация"],
-      image: "💼",
+      logo: {
+        name: "DigitalFlow",
+        colors: ["#059669", "#047857"],
+        icon: "D",
+      },
     },
   ];
 
@@ -60,9 +72,24 @@ const PortfolioSection = () => {
                 className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-2"
               >
                 <CardContent className="p-6 space-y-4">
-                  {/* Project Image/Icon */}
-                  <div className="w-full h-48 bg-gradient-to-br from-primary/10 to-primary/5 rounded-lg flex items-center justify-center text-6xl group-hover:scale-105 transition-transform">
-                    {project.image}
+                  {/* Project Logo */}
+                  <div className="w-full h-48 bg-gradient-to-br from-muted/20 to-muted/10 rounded-lg flex flex-col items-center justify-center group-hover:scale-105 transition-transform p-8">
+                    <div
+                      className="w-20 h-20 rounded-xl flex items-center justify-center text-white font-bold text-2xl mb-4 shadow-lg"
+                      style={{
+                        background: `linear-gradient(135deg, ${project.logo.colors[0]}, ${project.logo.colors[1]})`,
+                      }}
+                    >
+                      {project.logo.icon}
+                    </div>
+                    <div className="text-center">
+                      <div className="font-semibold text-foreground">
+                        {project.logo.name}
+                      </div>
+                      <div className="text-xs text-muted-foreground mt-1">
+                        Клиент проекта
+                      </div>
+                    </div>
                   </div>
 
                   {/* Project Info */}
