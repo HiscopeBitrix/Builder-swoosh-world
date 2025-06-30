@@ -1,7 +1,8 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
+import FormModal from "@/components/FormModal";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -9,6 +10,8 @@ import { ArrowRight, Users, BarChart, Workflow, Building } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function Bitrix24Services() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -38,7 +41,7 @@ export default function Bitrix24Services() {
       icon: Workflow,
       title: "Автоматизация бизнес-процессов",
       description:
-        "Автоматизируем рутинные задачи и настраиваем бизнес-про��ессы в Bitrix24",
+        "Автоматизируем рутинные задачи и настраиваем бизнес-процессы в Bitrix24",
       features: ["Роботы", "Бизнес-процессы", "Уведомления"],
       slug: "automation",
       gradient: "from-violet-500 to-purple-600",
@@ -83,11 +86,18 @@ export default function Bitrix24Services() {
               <Button
                 size="lg"
                 className="bg-gradient-to-r from-cyan-500 to-blue-600"
+                onClick={() => setIsModalOpen(true)}
               >
                 Получить консультацию
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
-              <Button variant="outline" size="lg">
+              <Button
+                variant="outline"
+                size="lg"
+                onClick={() => {
+                  window.location.href = "/portfolio";
+                }}
+              >
                 Смотреть кейсы
               </Button>
             </div>
@@ -168,6 +178,7 @@ export default function Bitrix24Services() {
                         <Button
                           size="sm"
                           className={`bg-gradient-to-r ${service.gradient} hover:opacity-90 text-xs px-6`}
+                          onClick={() => setIsModalOpen(true)}
                         >
                           Заказать
                         </Button>
@@ -222,6 +233,13 @@ export default function Bitrix24Services() {
       </main>
       <Footer />
       <ScrollToTop />
+
+      <FormModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        title="Заказать услугу Bitrix 24"
+        buttonText="Отправить заявку"
+      />
     </div>
   );
 }
