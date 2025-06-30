@@ -48,7 +48,7 @@ const Header = () => {
           </nav>
 
           {/* CTA Button */}
-          <Button>Получить консультацию</Button>
+          <Button>Заказать звонок</Button>
         </div>
 
         {/* Mobile Layout */}
@@ -102,7 +102,7 @@ const Header = () => {
                 </Link>
               ))}
               <div className="px-3 py-2">
-                <Button className="w-full">Получить консультацию</Button>
+                <Button className="w-full">Заказать звонок</Button>
               </div>
             </div>
           </div>
