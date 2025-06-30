@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import FormModal from "@/components/FormModal";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -12,6 +13,7 @@ export default function Portfolio() {
   }, []);
 
   const [activeCategory, setActiveCategory] = useState(0);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const portfolioCategories = [
     {
@@ -30,7 +32,7 @@ export default function Portfolio() {
           name: "Интернет-магазин спортивных товаров",
           type: "E-commerce",
           description:
-            "Полнофункциональный интернет-магазин с системой управления заказами и платежным�� системами.",
+            "Полнофункциональный интернет-магазин с системой управления заказами и платежными системами.",
           tech: ["1С-Битрикс", "E-commerce", "Платежные системы"],
           url: "https://sportzone-shop.ru",
         },
@@ -54,7 +56,7 @@ export default function Portfolio() {
           name: "Образовательный портал",
           type: "Портал",
           description:
-            "Платформа для онлайн-обучения с системой тестирования и прогресса ст��дентов.",
+            "Платформа для онлайн-обучения с системой тестирования и прогресса студентов.",
           tech: ["1С-Битрикс", "LMS", "Тестирование"],
           url: "https://edu-portal.ru",
         },
@@ -276,11 +278,20 @@ export default function Portfolio() {
               Свяжитесь с нами для обсуждения деталей вашего проекта и получения
               персонального предложения
             </p>
-            <Button size="lg">Начать проект</Button>
+            <Button size="lg" onClick={() => setIsModalOpen(true)}>
+              Начать проект
+            </Button>
           </div>
         </section>
       </main>
       <Footer />
+
+      <FormModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        title="Начать проект"
+        buttonText="От��равить заявку"
+      />
     </div>
   );
 }

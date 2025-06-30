@@ -20,7 +20,7 @@ export default function Services() {
     },
     {
       icon: Wrench,
-      title: "Техническая поддержка сайтов",
+      title: "Техническая поддер��ка сайтов",
       description: "Комплексная техническая поддержка ваших веб-ресурсов",
       blocks: [
         "Важность технической поддержки и регулярных обновлений",
@@ -138,7 +138,9 @@ export default function Services() {
               Свяжитесь с нами для получения подробной информации о наших
               услугах и обсуждения вашего проекта
             </p>
-            <Button size="lg">Получить консультацию</Button>
+            <Button size="lg" onClick={() => setIsModalOpen(true)}>
+              Получить консультацию
+            </Button>
           </div>
         </section>
       </main>
