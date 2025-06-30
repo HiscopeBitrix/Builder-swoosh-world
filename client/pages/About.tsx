@@ -1,7 +1,8 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
+import FormModal from "@/components/FormModal";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -18,6 +19,8 @@ import {
 } from "lucide-react";
 
 export default function About() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -145,11 +148,18 @@ export default function About() {
                   <Button
                     size="lg"
                     className="group bg-gradient-to-r from-primary to-accent"
+                    onClick={() => {
+                      window.location.href = "/portfolio";
+                    }}
                   >
                     Наши проекты
                     <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </Button>
-                  <Button variant="outline" size="lg">
+                  <Button
+                    variant="outline"
+                    size="lg"
+                    onClick={() => setIsModalOpen(true)}
+                  >
                     Связаться с нами
                   </Button>
                 </div>
@@ -204,7 +214,7 @@ export default function About() {
                       <strong className="text-foreground">Видение:</strong> Мы
                       стремимся стать ведущим партнером для компаний, которые
                       хотят цифровизировать свои процессы и получить
-                      конкурентные преимущества.
+                      конкурен��ные преимущества.
                     </p>
                     <p>
                       <strong className="text-foreground">История:</strong> Мы
@@ -355,11 +365,18 @@ export default function About() {
               <Button
                 size="lg"
                 className="bg-gradient-to-r from-primary to-accent"
+                onClick={() => setIsModalOpen(true)}
               >
                 Обсудить проект
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
-              <Button variant="outline" size="lg">
+              <Button
+                variant="outline"
+                size="lg"
+                onClick={() => {
+                  window.location.href = "/contacts";
+                }}
+              >
                 Наши контакты
               </Button>
             </div>
@@ -368,6 +385,13 @@ export default function About() {
       </main>
       <Footer />
       <ScrollToTop />
+
+      <FormModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        title="Связаться с нами"
+        buttonText="Отправить заявку"
+      />
     </div>
   );
 }
