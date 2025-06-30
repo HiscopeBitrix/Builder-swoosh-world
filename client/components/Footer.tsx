@@ -40,12 +40,7 @@ const Footer = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Company Info */}
             <div className="space-y-6">
-              <Link to="/" className="flex items-center space-x-2">
-                <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center">
-                  <span className="text-primary-foreground font-bold text-sm">
-                    1C
-                  </span>
-                </div>
+              <Link to="/" className="flex items-center">
                 <span className="font-bold text-xl text-foreground">
                   IT-Мечта
                 </span>
