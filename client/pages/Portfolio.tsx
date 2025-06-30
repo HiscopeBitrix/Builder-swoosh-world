@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -13,7 +14,7 @@ export default function Portfolio() {
       projects: [
         {
           name: "Корпоративный сайт производственной компании",
-          type: "Корпоративный сайт",
+          type: "Корпоративный сай��",
           tech: ["1С-Битрикс", "Адаптивный дизайн"],
         },
         {
@@ -225,6 +226,7 @@ export default function Portfolio() {
           </div>
         </section>
       </main>
+      <Footer />
     </div>
   );
 }

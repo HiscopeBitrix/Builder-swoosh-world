@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Code, Wrench, Zap, Settings, ArrowRight } from "lucide-react";
@@ -35,7 +36,7 @@ export default function Services() {
         "Описание услуг по доработке сайтов",
         "Примеры функционала (новые разделы, модули, интеграции)",
         "Преимущества доработки для бизнеса",
-        "Примеры успешных до��аботок сайтов",
+        "Примеры успешных доработок сайтов",
       ],
     },
     {
@@ -140,6 +141,7 @@ export default function Services() {
           </div>
         </section>
       </main>
+      <Footer />
     </div>
   );
 }
