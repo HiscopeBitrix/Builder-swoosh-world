@@ -33,7 +33,7 @@ const Header = () => {
                 </span>
               </div>
               <span className="font-bold text-xl text-foreground">
-                BitrixPro
+                IT-Мечта
               </span>
             </Link>
 
@@ -103,7 +103,7 @@ const Header = () => {
                 </span>
               </div>
               <span className="font-bold text-xl text-foreground">
-                BitrixPro
+                IT-Мечта
               </span>
             </Link>
 
