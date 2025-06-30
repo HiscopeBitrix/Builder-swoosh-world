@@ -54,9 +54,9 @@ const ServicePricing = ({ plans, gradient }: ServicePricingProps) => {
               )}
 
               {plan.badge && (
-                <div className="absolute -top-3 right-4">
+                <div className="absolute -top-2 right-2 z-10">
                   <Badge
-                    className={`bg-gradient-to-r ${gradient} text-white border-0`}
+                    className={`bg-gradient-to-r ${gradient} text-white border-0 text-xs px-2 py-1`}
                   >
                     <Star className="w-3 h-3 mr-1" />
                     {plan.badge}
