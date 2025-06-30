@@ -29,7 +29,7 @@ export default function About() {
     {
       icon: Users,
       number: "100+",
-      label: "Довольных клиентов",
+      label: "Дов��льных клиентов",
       description: "Компании доверяют нам свои проекты",
     },
     {
@@ -271,51 +271,6 @@ export default function About() {
                   </Card>
                 );
               })}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA */}
-        <section className="py-20 bg-gradient-to-br from-primary/5 to-accent/5">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
-                Наша команда
-              </h2>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                Проф��ссионалы, которые воплощают ваши идеи в жизнь
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {team.map((member, index) => (
-                <Card
-                  key={index}
-                  className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 text-center overflow-hidden"
-                >
-                  <div
-                    className={`h-1 bg-gradient-to-r ${member.gradient}`}
-                  ></div>
-                  <CardContent className="p-8 space-y-4">
-                    <div
-                      className={`mx-auto w-20 h-20 bg-gradient-to-br ${member.gradient} rounded-full flex items-center justify-center text-3xl group-hover:scale-110 transition-transform`}
-                    >
-                      {member.avatar}
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-foreground">
-                        {member.name}
-                      </h3>
-                      <p className="text-sm text-muted-foreground">
-                        {member.role}
-                      </p>
-                      <Badge variant="secondary" className="text-xs mt-2">
-                        {member.experience}
-                      </Badge>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
             </div>
           </div>
         </section>
