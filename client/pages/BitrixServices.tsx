@@ -28,7 +28,7 @@ export default function BitrixServices() {
         "Новостные порталы",
       ],
       slug: "corporate-sites",
-      gradient: "from-blue-500 to-blue-700",
+      gradient: "#d91935",
       price: "от 150 000 ₽",
     },
     {
@@ -70,7 +70,10 @@ export default function BitrixServices() {
         {/* Compact Hero Section */}
         <section className="py-16 lg:py-20 bg-gradient-to-br from-background via-background to-primary/10 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 via-transparent to-red-500/5"></div>
-          <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 via-red-500 to-green-500"></div>
+          <div
+            className="absolute top-0 left-0 w-full h-1"
+            style={{ backgroundColor: "#d91935" }}
+          ></div>
 
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <Badge variant="outline" className="mb-4">
@@ -78,9 +81,7 @@ export default function BitrixServices() {
             </Badge>
             <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
               Услуги разработки на{" "}
-              <span className="bg-gradient-to-r from-blue-500 to-red-600 bg-clip-text text-transparent">
-                1С-Битрикс
-              </span>
+              <span style={{ color: "#d91935" }}>1С-Битрикс</span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
               Полный спектр услуг по разработке, поддержке и доработке
@@ -89,8 +90,8 @@ export default function BitrixServices() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-blue-500 to-red-600"
                 onClick={() => setIsModalOpen(true)}
+                style={{ backgroundColor: "#d91935" }}
               >
                 Получить консультацию
                 <ArrowRight className="ml-2 h-4 w-4" />
@@ -116,7 +117,7 @@ export default function BitrixServices() {
                 Наши решения на 1С-Битрикс
               </h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                Выберите подходящую услугу для развития вашего бизнеса
+                ��ыберите подходящую услугу для развития вашего бизнеса
               </p>
             </div>
 
@@ -129,12 +130,26 @@ export default function BitrixServices() {
                     className="group hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 overflow-hidden border-0 bg-gradient-to-br from-card/90 to-card/70 backdrop-blur"
                   >
                     <div
-                      className={`h-1 bg-gradient-to-r ${service.gradient}`}
+                      className="h-1"
+                      style={{
+                        backgroundColor:
+                          typeof service.gradient === "string" &&
+                          !service.gradient.includes("from-")
+                            ? service.gradient
+                            : "",
+                      }}
                     ></div>
                     <CardHeader className="pb-4">
                       <div className="flex items-start space-x-4">
                         <div
-                          className={`w-16 h-16 bg-gradient-to-br ${service.gradient} rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg flex-shrink-0`}
+                          className="w-16 h-16 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg flex-shrink-0"
+                          style={{
+                            background:
+                              typeof service.gradient === "string" &&
+                              !service.gradient.includes("from-")
+                                ? service.gradient
+                                : `linear-gradient(135deg, ${service.gradient.split(" ")[1]}, ${service.gradient.split(" ")[3]})`,
+                          }}
                         >
                           <Icon className="h-8 w-8 text-white" />
                         </div>
@@ -181,7 +196,14 @@ export default function BitrixServices() {
                         </Link>
                         <Button
                           size="sm"
-                          className={`bg-gradient-to-r ${service.gradient} hover:opacity-90 text-xs px-6`}
+                          className="hover:opacity-90 text-xs px-6"
+                          style={{
+                            background:
+                              typeof service.gradient === "string" &&
+                              !service.gradient.includes("from-")
+                                ? service.gradient
+                                : `linear-gradient(135deg, ${service.gradient.split(" ")[1]}, ${service.gradient.split(" ")[3]})`,
+                          }}
                           onClick={() => setIsModalOpen(true)}
                         >
                           Заказать
@@ -202,7 +224,10 @@ export default function BitrixServices() {
                   </h3>
                   <div className="grid md:grid-cols-3 gap-6 text-sm text-muted-foreground">
                     <div className="space-y-2">
-                      <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-700 rounded-xl flex items-center justify-center mx-auto">
+                      <div
+                        className="w-12 h-12 rounded-xl flex items-center justify-center mx-auto"
+                        style={{ backgroundColor: "#d91935" }}
+                      >
                         <span className="text-white font-bold">№1</span>
                       </div>
                       <div className="font-semibold">Лидер рынка в России</div>
