@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ScrollToTop from "@/components/ScrollToTop";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Code, Wrench, Zap, Settings, ArrowRight } from "lucide-react";
@@ -142,6 +143,7 @@ export default function Services() {
         </section>
       </main>
       <Footer />
+      <ScrollToTop />
     </div>
   );
 }
